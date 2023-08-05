@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function getLatestVersionFromAPI(api_name) {
         const link = url + api_name;
         //const proxyUrl='https://cors-proxy.htmldriven.com/?url'
-        //const proxyUrl ='https://corsproxy.io/?'// Example CORS proxy
+        const proxyUrl ='https://corsproxy.io/?'// Example CORS proxy
 //const proxyUrl= 'https://api.allorigins.win/get?url='
-        const proxyUrl = ''//https://gobetween.oklabs.org/'
+        //const proxyUrl = ''//https://gobetween.oklabs.org/'
         return fetch(proxyUrl + link)
            // .then(function(response) { console.log(response)})
             .then(function(data) {
