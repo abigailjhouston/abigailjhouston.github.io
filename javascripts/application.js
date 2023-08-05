@@ -42,9 +42,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         const proxyUrl ='https://corsproxy.io/?'// Example CORS proxy
 //const proxyUrl= 'https://api.allorigins.win/get?url='
         //const proxyUrl = ''//https://gobetween.oklabs.org/'
-        return fetch(proxyUrl + link)
+        return fetch(proxyUrl + link, {
+            method: 'GET',
+            redirect:'manual'
+        })
            // .then(function(response) { console.log(response)})
             .then(function(data) {
+               console.log(data)
                 // if (response.status >= 300 && response.status < 400) {
                 if (data.ok) {
                     console.log(data)
